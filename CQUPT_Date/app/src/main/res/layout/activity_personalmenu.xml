@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/background"
+            android:background="@drawable/top_gradient"/>
+        <Button
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/back"
+            android:id="@+id/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="修改个人信息"
+            android:background="#00000003"
+            android:textSize="18sp"
+            android:id="@+id/edit"
+            android:textColor="@color/app_white"/>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/head"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="fitCenter"
+            app:riv_corner_radius="60dp"
+            app:riv_border_width="3dp"
+            app:riv_border_color="@color/app_blue"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat"
+            app:riv_oval="true"
+            android:layout_height="120dp"
+            android:layout_width="120dp" />
+
+        <TextView
+            android:layout_below="@+id/head"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="秦先生"
+            android:textColor="@color/text_black"
+            android:textSize="20sp"
+            android:id="@+id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/sex"
+            android:layout_below="@+id/head"
+            android:layout_toRightOf="@+id/username"/>
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/username"
+            android:hint="ta想说点啥，但是懒得写"
+            android:background="@null"
+            android:textAlignment="center"
+            android:lines="1"
+            android:id="@+id/sthtosay"
+            android:textSize="14sp"
+            android:textColor="@color/text_grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_black"
+            android:layout_below="@+id/sthtosay"
+            android:layout_marginLeft="50dp"
+            android:text="17级 自动化学院 自动化1班"
+            android:id="@+id/major"/>
+        <ImageView
+            android:layout_below="@+id/sthtosay"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/major" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/text_black"
+            android:layout_below="@+id/major"
+            android:text="17岁 台湾南昌"
+            android:id="@+id/person"
+            android:textSize="16sp"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/major"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/person"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/single"
+            android:text="ta还是单身"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            android:layout_below="@+id/person"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/person"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/single"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/phone"
+            android:text="11111111111"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            android:layout_below="@+id/single"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/single"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/phone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/qq"
+            android:text="1111111111"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            android:layout_below="@+id/phone"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/phone"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/qq"/>
+    </RelativeLayout>
+</ScrollView>

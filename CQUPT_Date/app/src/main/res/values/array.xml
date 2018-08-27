@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="searcharry">
+        <item>通过用户名搜索</item>
+        <item>通过学号搜索</item>
+        <item>通过标签搜索</item>
+    </string-array>
+    <string-array name="collegearry">
+        <item>通信与信息工程学院</item>
+        <item>计算机科学与技术学院</item>
+        <item>自动化学院</item>
+        <item>先进制造工程学院</item>
+        <item>光电工程学院</item>
+        <item>软件工程学院</item>
+        <item>生物信息学院</item>
+        <item>理学院</item>
+        <item>经济管理学院</item>
+        <item>传媒艺术学院</item>
+        <item>外国语学院</item>
+        <item>国际学院</item>
+        <item>网络空间安全与信息法学院</item>
+        <item>体育学院</item>
+    </string-array>
+    <string-array name="txarry">
+        <item>通信工程</item>
+        <item>电子信息工程</item>
+        <item>信息工程</item>
+        <item>广播电视工程</item>
+        <item>数字媒体技术</item>
+    </string-array>
+    <string-array name="jsjarry">
+        <item>计算机科学与技术</item>
+        <item>地理信息系统</item>
+        <item>网络工程</item>
+        <item>智能科学与技术</item>
+        <item>空间信息与数字技术</item>
+    </string-array>
+    <string-array name="zdharry">
+        <item>自动化</item>
+        <item>测控技术与仪器</item>
+        <item>电气工程与自动化</item>
+        <item>物联网工程</item>
+        <item>智能电网信息工程</item>
+    </string-array>
+    <string-array name="xjarry">
+        <item>机械设计制造及其自动化</item>
+        <item>机械电子工程</item>
+        <item>机器人工程</item>
+    </string-array>
+    <string-array name="gdarry">
+        <item>电子科学与技术</item>
+        <item>电子信息科学与技术</item>
+        <item>光电信息科学与工程</item>
+        <item>电磁场与无线技术</item>
+        <item>微电子科学与工程</item>
+        <item>集成电路设计与集成系统</item>
+    </string-array>
+    <string-array name="rjarry">
+        <item>软件工程</item>
+    </string-array>
+    <string-array name="swarry">
+        <item>生物医学工程</item>
+        <item>生物技术</item>
+        <item>制药工程</item>
+        <item>生物信息学</item>
+    </string-array>
+    <string-array name="larry">
+        <item>信息与计算科学</item>
+        <item>数学与应用数学</item>
+        <item>应用物理学</item>
+    </string-array>
+    <string-array name="jgarry">
+        <item>信息管理与信息系统</item>
+        <item>工程管理</item>
+        <item>工商管理</item>
+        <item>市场营销</item>
+        <item>会计学</item>
+        <item>经济学</item>
+        <item>电子商务</item>
+        <item>物流管理</item>
+    </string-array>
+    <string-array name="cmarry">
+        <item>广播电视编导</item>
+        <item>动画</item>
+        <item>艺术设计</item>
+    </string-array>
+    <string-array name="wgyarry">
+        <item>英语</item>
+        <item>翻译</item>
+    </string-array>
+    <string-array name="gjarry">
+        <item>英语(中加)</item>
+        <item>电子信息工程(中美)</item>
+        <item>软件工程(中美)</item>
+    </string-array>
+    <string-array name="afarry">
+        <item>法学</item>
+        <item>知识产权</item>
+        <item>信息安全</item>
+    </string-array>
+    <string-array name="tyarry">
+        <item>社会体育</item>
+    </string-array>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:orientation="vertical">
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_type"
+            android:entries="@array/searcharry"/>
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.SearchView
+                android:layout_marginTop="5dp"
+                android:id="@+id/searchview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.SearchView>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+                <Spinner
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search_college"
+                    android:entries="@array/collegearry">
+                </Spinner>
+                <Spinner
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search_major">
+                </Spinner>
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:text="搜索"
+                    android:id="@+id/search"
+                    android:background="@color/app_lightpurple"
+                    android:layout_gravity="right"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.RecyclerView
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:id="@+id/recycler"
+            android:layout_height="600dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+</ScrollView>

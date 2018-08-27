@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center">
+        <EditText
+            android:layout_marginTop="25dp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:inputType="text"
+            android:textColorHint="@color/app_lightpurple"
+            android:hint="请输入用户名"
+            android:id="@+id/username"/>
+
+        <EditText
+            android:layout_marginTop="95dp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:id="@+id/password"
+            android:textColorHint="@color/app_lightpurple"
+            android:layout_gravity="center_horizontal"
+            android:inputType="numberPassword"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:layout_gravity="center_horizontal">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_lightpurple"
+                android:textColor="@color/app_white"
+                android:id="@+id/login"
+                android:text="登陆"/>
+
+        </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

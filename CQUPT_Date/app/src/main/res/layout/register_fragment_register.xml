@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center">
+        <EditText
+            android:layout_marginTop="25dp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:inputType="text"
+            android:textColorHint="@color/app_lightpurple"
+            android:hint="请输入用户名"
+            android:id="@+id/username"/>
+
+        <EditText
+            android:layout_marginTop="95dp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:id="@+id/password"
+            android:textColorHint="@color/app_lightpurple"
+            android:layout_gravity="center_horizontal"
+            android:inputType="numberPassword"/>
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/app_lightpurple"
+            android:text="您的性别为"/>
+        <RadioGroup
+            android:layout_marginTop="195dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/male"
+                android:text="男生         "
+                android:shadowColor="@color/app_blue"
+                android:textColor="@color/app_blue"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+            <RadioButton
+                android:id="@+id/female"
+                android:shadowColor="@color/app_pink"
+                android:text="女生"
+                android:textColor="@color/app_pink"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+        </RadioGroup>
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入电话号码"
+            android:textColorHint="@color/app_lightpurple"
+            android:layout_gravity="center_horizontal"
+            android:inputType="phone"
+            android:id="@+id/telephone"
+            android:layout_marginTop="250dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:layout_gravity="center_horizontal">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_lightpurple"
+                android:textColor="@color/app_white"
+                android:id="@+id/register"
+                android:text="注册"/>
+
+        </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

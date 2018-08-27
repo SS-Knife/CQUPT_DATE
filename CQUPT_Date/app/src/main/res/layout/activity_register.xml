@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/top_gradient"
+        app:popupTheme="@style/AppTheme"
+        app:contentInsetStart="0dp">
+        <TextView
+            android:textColor="@color/app_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="重邮约"
+            android:gravity="center"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/tablayout"
+        app:tabTextColor="@color/text_grey"
+        app:tabSelectedTextColor="@color/app_purple"
+        app:tabIndicatorHeight="2dp"
+        app:tabIndicatorColor="@color/app_purple">
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/viewpager"/>
+</LinearLayout>
