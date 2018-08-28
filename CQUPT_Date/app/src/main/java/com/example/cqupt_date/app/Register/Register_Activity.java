@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.avos.avoscloud.AVUser;
+import com.example.cqupt_date.app.Chat.CustomUserProvider;
 import com.example.cqupt_date.app.MainActivity;
 import com.example.cqupt_date.R;
 

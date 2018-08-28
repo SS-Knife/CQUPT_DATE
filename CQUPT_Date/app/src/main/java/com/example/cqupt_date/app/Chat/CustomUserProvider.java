@@ -31,41 +31,46 @@ public class CustomUserProvider implements LCChatProfileProvider {
         return customUserProvider;
     }
 
+    public synchronized static CustomUserProvider getnewInstance() {
+        customUserProvider = new CustomUserProvider();
+        return customUserProvider;
+    }
     private CustomUserProvider() {
     }
 
     static {
-        String classid = AVUser.getCurrentUser().get("friendclassid").toString();
-        AVQuery<AVObject> avQuery = new AVQuery<>("friend");
-        avQuery.getInBackground(classid, new GetCallback<AVObject>() {
-            @Override
-            public void done(AVObject avObject, AVException e) {
-                if (avObject.get("friendarray") != null) {
+        if(AVUser.getCurrentUser()!=null) {
+            String classid = AVUser.getCurrentUser().get("friendclassid").toString();
+            AVQuery<AVObject> avQuery = new AVQuery<>("friend");
+            avQuery.getInBackground(classid, new GetCallback<AVObject>() {
+                @Override
+                public void done(AVObject avObject, AVException e) {
+                    if (avObject.get("friendarray") != null) {
 
-                    ArrayList<String> friendsid_list = (ArrayList<String>) avObject.get("friendarray");
-                    for (String userId : friendsid_list) {
-                        AVQuery<AVUser> userQuery = new AVQuery<>("_User");
-                        userQuery.whereEqualTo("objectId", userId);
-                        userQuery.findInBackground(new FindCallback<AVUser>() {
-                            @Override
-                            public void done(List<AVUser> list, AVException e) {
-                                if (e == null) {
-                                    AVUser avUser = list.get(0);
-                                    LCChatKitUser chatKitUser = new LCChatKitUser(avUser.getObjectId(), avUser.get("username").toString(), avUser.get("head_url").toString());
-                                    allUser.add(chatKitUser);
-                                    Log.d("TAG", "done: 1111111111111111111111111111111 " + allUser.get(0).getUserId());
-                                } else {
-                                    e.printStackTrace();
+                        ArrayList<String> friendsid_list = (ArrayList<String>) avObject.get("friendarray");
+                        for (String userId : friendsid_list) {
+                            AVQuery<AVUser> userQuery = new AVQuery<>("_User");
+                            userQuery.whereEqualTo("objectId", userId);
+                            userQuery.findInBackground(new FindCallback<AVUser>() {
+                                @Override
+                                public void done(List<AVUser> list, AVException e) {
+                                    if (e == null) {
+                                        AVUser avUser = list.get(0);
+                                        LCChatKitUser chatKitUser = new LCChatKitUser(avUser.getObjectId(), avUser.get("username").toString(), avUser.get("head_url").toString());
+                                        allUser.add(chatKitUser);
+                                        Log.d("TAG", "done: 1111111111111111111111111111111 " + allUser.get(0).getUserId());
+                                    } else {
+                                        e.printStackTrace();
+                                    }
                                 }
-                            }
-                        });
+                            });
+                        }
                     }
                 }
-            }
-        });
-        LCChatKitUser chatKitUser = new LCChatKitUser(AVUser.getCurrentUser().getObjectId(), AVUser.getCurrentUser().get("username").toString(),AVUser.getCurrentUser().get("head_url").toString());
-        allUser.add(chatKitUser);
-
+            });
+            LCChatKitUser chatKitUser = new LCChatKitUser(AVUser.getCurrentUser().getObjectId(), AVUser.getCurrentUser().get("username").toString(), AVUser.getCurrentUser().get("head_url").toString());
+            allUser.add(chatKitUser);
+        }
     }
 
     public CustomUserProvider UpdateCustomUserProvider() {

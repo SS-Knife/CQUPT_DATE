@@ -17,6 +17,7 @@ import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.SaveCallback;
 import com.avos.avoscloud.SignUpCallback;
+import com.example.cqupt_date.app.Chat.CustomUserProvider;
 import com.example.cqupt_date.app.MainActivity;
 import com.example.cqupt_date.R;
 
@@ -92,6 +93,7 @@ public class Fragment_Register extends Fragment{
                         public void done(AVException e) {
                             if (e == null) {
                                 // 注册成功，把用户对象赋值给当前用户 AVUser.getCurrentUser()
+                                CustomUserProvider.getnewInstance();
                                 Intent intent=new Intent(getContext(), MainActivity.class);
                                 intent.putExtra("CurrentUserObjectID",user.getObjectId());
                                 startActivity(intent);

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.LogInCallback;
+import com.example.cqupt_date.app.Chat.CustomUserProvider;
 import com.example.cqupt_date.app.MainActivity;
 import com.example.cqupt_date.R;
 
@@ -48,6 +49,7 @@ public class Fragment_Login extends Fragment{
             @Override
             public void done(AVUser avUser, AVException e) {
                 if (e == null) {
+                    CustomUserProvider.getnewInstance();
                     Intent intent=new Intent(getContext(), MainActivity.class);
                     intent.putExtra("CurrentUserObjectID",avUser.getObjectId());
                     startActivity(intent);
